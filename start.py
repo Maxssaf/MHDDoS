@@ -1466,12 +1466,12 @@ if __name__ == '__main__':
                                proxies).start()
 
                 logger.info(
-                    f"{bcolors.WARNING}Attack Started to{bcolors.OKBLUE} %s{bcolors.WARNING} with{bcolors.OKBLUE} %s{bcolors.WARNING} method for{bcolors.OKBLUE} %s{bcolors.WARNING} seconds, threads:{bcolors.OKBLUE} %d{bcolors.WARNING}!{bcolors.RESET}"
+                    f"{Attack Started to %s with %s method for %s seconds, threads: %d!"
                     % (target or url.host, method, timer, threads))
                 event.set()
                 ts = time()
                 while time() < ts + timer:
-                    logger.debug(f'{bcolors.WARNING}Target:{bcolors.OKBLUE} %s,{bcolors.WARNING} Port:{bcolors.OKBLUE} %s,{bcolors.WARNING} Method:{bcolors.OKBLUE} %s{bcolors.WARNING} PPS:{bcolors.OKBLUE} %s,{bcolors.WARNING} BPS:{bcolors.OKBLUE} %s / %d%%{bcolors.RESET}' %
+                    logger.debug(f'Target: %s, Port: %s, Method: %s PPS: %s, BPS: %s / %d%%' %
                                  (target or url.host,
                                   port or (url.port or 80),
                                   method,
