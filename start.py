@@ -1466,7 +1466,7 @@ if __name__ == '__main__':
                                proxies).start()
 
                 logger.info(
-                    f"{Attack Started to %s with %s method for %s seconds, threads: %d!"
+                    f"Attack Started to %s with %s method for %s seconds, threads: %d!"
                     % (target or url.host, method, timer, threads))
                 event.set()
                 ts = time()
